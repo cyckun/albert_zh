@@ -743,6 +743,7 @@ def main(_):
       "wsc": WSCProcessor,
       "csl": CslProcessor,
       "copa": COPAProcessor,
+      "inews": InewsProcessor,
   }
 
   tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,

@@ -1,0 +1,25 @@
+***** Eval results /home/test1/PycharmProjects/albert_zh/inews_output/model.ckpt-0 *****
+eval_accuracy = 0.36111805
+eval_loss = 1.1040955
+global_step = 0
+loss = 1.10408
+***** Eval results /home/test1/PycharmProjects/albert_zh/inews_output/model.ckpt-300 *****
+eval_accuracy = 0.7234839
+eval_loss = 0.7903692
+global_step = 300
+loss = 0.7902211
+***** Eval results /home/test1/PycharmProjects/albert_zh/inews_output/model.ckpt-600 *****
+eval_accuracy = 0.73305047
+eval_loss = 0.7424684
+global_step = 600
+loss = 0.74230516
+***** Eval results /home/test1/PycharmProjects/albert_zh/inews_output/model.ckpt-900 *****
+eval_accuracy = 0.7386241
+eval_loss = 0.7018491
+global_step = 900
+loss = 0.7016983
+***** Eval results /home/test1/PycharmProjects/albert_zh/inews_output/model.ckpt-1004 *****
+eval_accuracy = 0.75027037
+eval_loss = 0.6716181
+global_step = 1004
+loss = 0.671474

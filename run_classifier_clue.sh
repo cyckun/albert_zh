@@ -51,8 +51,8 @@ download_model(){
 
 run_task() {
   TASK_NAME=$1
-  download_data $TASK_NAME
-  download_model $MODEL_NAME
+  #download_data $TASK_NAME
+  #download_model $MODEL_NAME
   DATA_DIR=$CLUE_DATA_DIR/${TASK_NAME}
   PREV_TRAINED_MODEL_DIR=$ALBERT_TINY_DIR
   MAX_SEQ_LENGTH=$2
@@ -92,9 +92,4 @@ run_task() {
 }
 
 ##command##task_name##model_name##max_seq_length##train_batch_size##learning_rate##num_train_epochs##save_checkpoints_steps##tpu_ip
-run_task afqmc 128 16 2e-5 3 300
-run_task cmnli 128 64 3e-5 2 300
-run_task csl 128 16 1e-5 5 100
-run_task iflytek 128 32 2e-5 3 300
-run_task tnews 128 16 2e-5 3 300
-run_task wsc 128 16 1e-5 10 10
+run_task inews 128 16 2e-5 3 300

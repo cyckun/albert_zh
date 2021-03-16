@@ -437,42 +437,42 @@ class CslProcessor(DataProcessor):
     return examples
 
 
-# class InewsProcessor(DataProcessor):
-#   """Processor for the MRPC data set (GLUE version)."""
-#
-#   def get_train_examples(self, data_dir):
-#     """See base class."""
-#     return self._create_examples(
-#         self._read_txt(os.path.join(data_dir, "train.txt")), "train")
-#
-#   def get_dev_examples(self, data_dir):
-#     """See base class."""
-#     return self._create_examples(
-#         self._read_txt(os.path.join(data_dir, "dev.txt")), "dev")
-#
-#   def get_test_examples(self, data_dir):
-#     """See base class."""
-#     return self._create_examples(
-#         self._read_txt(os.path.join(data_dir, "test.txt")), "test")
-#
-#   def get_labels(self):
-#     """See base class."""
-#     labels = ["0", "1", "2"]
-#     return labels
-#
-#   def _create_examples(self, lines, set_type):
-#     """Creates examples for the training and dev sets."""
-#     examples = []
-#     for (i, line) in enumerate(lines):
-#       if i == 0:
-#         continue
-#       guid = "%s-%s" % (set_type, i)
-#       text_a = convert_to_unicode(line[2])
-#       text_b = convert_to_unicode(line[3])
-#       label = convert_to_unicode(line[0]) if set_type != "test" else '0'
-#       examples.append(
-#           InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
-#     return examples
+class InewsProcessor(DataProcessor):
+  """Processor for the MRPC data set (GLUE version)."""
+
+  def get_train_examples(self, data_dir):
+    """See base class."""
+    return self._create_examples(
+        self._read_txt(os.path.join(data_dir, "train.txt")), "train")
+
+  def get_dev_examples(self, data_dir):
+    """See base class."""
+    return self._create_examples(
+        self._read_txt(os.path.join(data_dir, "dev.txt")), "dev")
+
+  def get_test_examples(self, data_dir):
+    """See base class."""
+    return self._create_examples(
+        self._read_txt(os.path.join(data_dir, "test.txt")), "test")
+
+  def get_labels(self):
+    """See base class."""
+    labels = ["0", "1", "2"]
+    return labels
+
+  def _create_examples(self, lines, set_type):
+    """Creates examples for the training and dev sets."""
+    examples = []
+    for (i, line) in enumerate(lines):
+      if i == 0:
+        continue
+      guid = "%s-%s" % (set_type, i)
+      text_a = convert_to_unicode(line[2])
+      text_b = convert_to_unicode(line[3])
+      label = convert_to_unicode(line[0]) if set_type != "test" else '0'
+      examples.append(
+          InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+    return examples
 #
 #
 # class THUCNewsProcessor(DataProcessor):
